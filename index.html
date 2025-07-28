@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Data Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>Student Data Form</h1>
+
+  <form id="dataForm">
+    <label>Name: <input type="text" id="name" required></label><br>
+    <label>Age: <input type="number" id="age" required></label><br>
+    <label>Email: <input type="email" id="email" required></label><br>
+    <label>Phone: <input type="text" id="phone" maxlength="10" required></label><br>
+
+    <fieldset>
+      <legend>Branch</legend>
+      <label><input type="radio" name="branch" value="CSE"> CSE</label>
+      <label><input type="radio" name="branch" value="ECE"> ECE</label>
+      <label><input type="radio" name="branch" value="EEE"> EEE</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Languages Known</legend>
+      <label><input type="checkbox" value="English" class="lang"> English</label>
+      <label><input type="checkbox" value="Hindi" class="lang"> Hindi</label>
+      <label><input type="checkbox" value="French" class="lang"> French</label>
+    </fieldset>
+
+    <label>State:
+      <select id="stateSelect" required>
+        <option value="">--Select State--</option>
+      </select>
+    </label><br>
+
+    <label>City:
+      <select id="citySelect" required>
+        <option value="">--Select City--</option>
+      </select>
+    </label><br>
+
+    <button type="submit" id="addBtn" disabled>Add</button>
+  </form>
+
+  <hr>
+
+  <input type="text" id="searchInput" placeholder="Search...">
+  <p id="entryCount">Total Entries: 0</p>
+
+  <table id="dataTable" border="1">
+    <thead>
+      <tr>
+        <th>Name</th><th>Age</th><th>Email</th><th>Phone</th>
+        <th>Branch</th><th>Languages</th><th>State</th><th>City</th><th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <p id="noResults" style="display:none;">No results found</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
